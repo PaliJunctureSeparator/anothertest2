@@ -53,7 +53,7 @@ function fetchApi(word){
     wrapper.classList.remove("active");
     infoText.style.color = "#000";
     infoText.innerHTML = `Searching the meaning of <span>"${word}"</span>`;
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    let url = `https://www.jsonkeeper.com/b/5L86`;
     fetch(url).then(response => response.json()).then(result => data(result, word)).catch(() =>{
         infoText.innerHTML = `Can't find the meaning of <span>"${word}"</span>. Please, try to search for another word.`;
     });
